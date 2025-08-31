@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(16, 15, 15);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #header {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar ul {
+            list-style-type: none;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        #navbar li {
+            float: left;
+        }
+        #navbar a {
+            text-decoration: none;
+            color: aliceblue;
+            transition: all 0.3s ease-in;
+            padding: 5px;
+            display: block;
+        }
+        #navbar a:hover {
+            color: orchid;
+        }
+        video {
+            margin-left: 2px;
+            margin-right: 2px;
+            object-fit: cover;
+            width: 99%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>JHARKHAND</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+        <video autoplay loop muted id="landing-video">
+            <source src="media/video/Landing(mp4).mp4" type="video/mp4">
+            <source src="media/video/Landing(webm).webm" type="video/webm">
+            Video is not supported in your browser.
+        </video>
+    </div>
+</body>
+</html>
