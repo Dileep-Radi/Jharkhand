@@ -12,13 +12,20 @@
         Login
       </div>
 
-      <form class="form">
+      <form class="form" name="login_form" method="post">
         <div class="form-group">
           <label for="phone_number">Phone number</label>
           <input type="text" id="phone_number" name="phone_number" placeholder="Enter your Phone number" title="Phone Number" required="">
         </div>
 
-        <button class="form-submit-btn" type="submit">Send OTP</button>
+        <button class="form-submit-btn" type="submit" id="send-otp-btn">SEND OTP</button>
+
+        <div class="form-group" id="otp-group">
+          <label for="otp">OTP</label>
+          <input type="text" id="otp" name="otp" placeholder="Enter your OTP" title="OTP" required="" readonly name="otp">
+        </div>
+
+        <button class="form-submit-btn" type="submit" id="login-btn" disabled name="login-btn">Login</button>
       </form>
 
       <p class="signup-link">
@@ -26,5 +33,6 @@
         <a href="signup/signup.html" class="signup-link link"> Sign up now</a>
       </p>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>
