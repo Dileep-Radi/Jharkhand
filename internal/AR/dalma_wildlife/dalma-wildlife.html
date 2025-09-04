@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="dalma-wildlife.css">
+</head>
+<body>
+    <div id="header">
+        <h1>JHARKHAND</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="internal/login/login.html">Login</a></li>
+                <li>
+                    <a href="#">Plans <i class="fas fa-caret-down"></i> </a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="internal/culture/chronicles.html">Chronicles</a></li>
+                        <li><a href="internal/wildlife/wildlife.html">Wildlife</a></li>
+                      </ul>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main id="viewer-wrap">
+            <a-scene embedded>
+                <a-sky id="vr-sky" src="../../../media/images/dalma_wildlife/Entrance.jpg"></a-sky>
+                <a-entity id="nav" position="0 -2 -3">
+                    <a-text value="1" position="-2 0 0" color="yellow"
+                            onclick="changeScene('../../../media/images/dalma_wildlife/Entrance.jpg')"></a-text>
+
+                    <a-text value="2" position="-1 0 0" color="yellow"
+                            onclick="changeScene('../../../media/images/dalma_wildlife/Trail.jpg')"></a-text>
+
+                    <a-text value="3" position="0 0 0" color="yellow"
+                            onclick="changeScene('../../../media/images/dalma_wildlife/Hilltop.jpg')"></a-text>
+
+                    <a-text value="4" position="1 0 0" color="yellow"
+                            onclick="changeScene('../../../media/images/dalma_wildlife/Animals.jpg')"></a-text>
+
+                    <a-text value="5" position="2 0 0" color="yellow"
+                            onclick="changeScene('../../../media/images/dalma_wildlife/Sunset.jpg')"></a-text>
+                </a-entity>
+            </a-scene>
+        </main>
+    <script src="dalma-wildlife.js"></script>
+    </body>
+</html>
+    
