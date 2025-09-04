@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jharkhand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,10 +14,17 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Adventure</a></li>
-                <li><a href="internal/Culture/chronicles.html">Culture</a></li>
                 <li><a href="internal/login/login.html">Login</a></li>
-                <li><a href="#">Plans</a></li>
-                <li><a href="#">About us</a></li>
+                <li>
+                    <a href="#">Plans <i class="fas fa-caret-down"></i> </a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="internal/Culture/chronicles.html">Chronicles</a></li>
+                        <li><a href="internal/Wildlife/wildlife.html">Wildlife</a></li>
+                      </ul>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <video autoplay loop muted id="landing-video">

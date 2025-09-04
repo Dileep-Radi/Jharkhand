@@ -19,24 +19,75 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* Navbar */
 #navbar ul {
-    list-style-type: none;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
+
 #navbar li {
-    float: left;
+  float: left;
+  position: relative;
 }
+
 #navbar a {
-    text-decoration: none;
-    color: aliceblue;
-    transition: all 0.3s ease-in;
-    padding: 5px;
-    display: block;
+  text-decoration: none;
+  color: aliceblue;
+  transition: all 0.3s ease-in;
+  padding: 5px 12px;
+  display: flex;        
+  align-items: center;
+  gap: 5px;
 }
+
 #navbar a:hover {
-    color: orchid;
+  color: orchid;
+}
+
+/* Dropdown */
+.dropdown-menu-1 {
+  position: absolute;
+  top: 100%;   
+  left: 0;
+  background: #222;
+  min-width: 160px;
+  display: none;         
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown-menu-1 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu-1 li a {
+  padding: 8px 12px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropdown-menu-1 li a:hover {
+  background: #444;
+  color: orchid;
+}
+
+#navbar li:hover > .dropdown-menu-1 {
+  display: block;
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+/* ===== Caret Rotate ===== */
+#navbar li:hover > a i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 video {
     margin-left: 2px;
