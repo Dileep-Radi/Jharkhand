@@ -86,10 +86,3 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
-/* Common css styles end here */
-video {
-    margin-left: 2px;
-    margin-right: 2px;
-    object-fit: cover;
-    width: 99%;
-}
