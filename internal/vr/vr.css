@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-#header {
+header {
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -46,7 +46,6 @@ body {
   color: orchid;
 }
 
-/* Dropdown */
 .dropdown-menu-1 {
   position: absolute;
   top: 100%;   
@@ -87,7 +86,8 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
-/* Common styles end here */
+/* Common css styles end here */
+
 main {
     margin-top: 80px;
     height: calc(100vh - 80px);

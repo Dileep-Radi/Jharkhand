@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-#header {
+header {
     margin-top: 10px;
     width: 100%;
     display: flex;

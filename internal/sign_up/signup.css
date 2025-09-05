@@ -1,19 +1,17 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  background-color: #000000;
-  color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: clamp(1rem, 5vw, 2rem);
-  padding-left: clamp(1rem, 5vw, 2rem);
+    background-color: rgb(16, 15, 15);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#header {
+header {
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -48,7 +46,6 @@ body {
   color: orchid;
 }
 
-/* Dropdown */
 .dropdown-menu-1 {
   position: absolute;
   top: 100%;   
@@ -85,11 +82,12 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== Caret Rotate ===== */
 #navbar li:hover > a i {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
+/* Common css styles end here */
+
 input {
   color: #ffffff;
 }

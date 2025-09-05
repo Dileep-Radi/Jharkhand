@@ -4,17 +4,14 @@
     box-sizing: border-box;
 }
 body {
+    background-color: rgb(16, 15, 15);
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    background-color: black;
-    color: #dfcbcb;
-    padding-right: clamp(1rem, 5vw, 2rem);
-    padding-left: clamp(1rem, 5vw, 2rem);
+    justify-content: center;
 }
-#header {
+header {
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -49,7 +46,6 @@ body {
   color: orchid;
 }
 
-/* Dropdown */
 .dropdown-menu-1 {
   position: absolute;
   top: 100%;   
@@ -86,11 +82,12 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== Caret Rotate ===== */
 #navbar li:hover > a i {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
+/* Common css styles end here */
+
 .top-section {
     display: flex;
     flex-direction: column;
