@@ -1,0 +1,9 @@
+Frontend stack:
+Vanilla JS + HTML + CSS
+A-frame (VR web framework)
+Font Awesome 5.15.1 (icon library)
+Google Fonts (font family)
+
+Backend stack (not yet implemented): 
+FastAPI (Core backend)
+PostgreSQL (Database)
