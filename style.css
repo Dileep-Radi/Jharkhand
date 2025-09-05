@@ -104,3 +104,6 @@ video {
     object-fit: cover;
     width: 99%;
 }
+footer{
+  bottom: 1;
+}
