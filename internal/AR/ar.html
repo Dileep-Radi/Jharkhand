@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jharkhand</title>
     <link rel="stylesheet" href="ar.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -31,35 +31,29 @@
     </div>
     <main>
         <div class="controls-info">
-            Use mouse to look around • WASD to move • Click images to navigate to details • Press 1-4 keys for quick access
+            Use mouse to look around • WASD to move • Click and hold images to navigate to details • Press 1-4 keys for quick access
         </div>
         
         <a-scene id="vr-scene" embedded>
-            <!-- Assets -->
             <a-assets>
                 <img id="img1" src="https://picsum.photos/800/600?random=1" crossorigin="anonymous">
                 <img id="img2" src="https://picsum.photos/800/600?random=2" crossorigin="anonymous">
                 <img id="img3" src="https://picsum.photos/800/600?random=3" crossorigin="anonymous">
                 <img id="img4" src="https://picsum.photos/800/600?random=4" crossorigin="anonymous">
+                <img id="marble-texture" src="../../media/images/marble.jpg" crossorigin="anonymous">
             </a-assets>
-
-            <!-- Sky -->
-            <a-sky color="#87CEEB"></a-sky>
-            
-            <!-- Lighting -->
+            <a-sky color="#2F2F2F"></a-sky>
             <a-light type="ambient" color="#404040"></a-light>
             <a-light type="directional" position="0 5 5" color="#ffffff"></a-light>
-
-            <!-- Floor -->
             <a-plane position="0 0 0" 
                      rotation="-90 0 0" 
                      width="20" 
                      height="20" 
-                     color="#7BC8A4" 
+                     src="../../media/images/marble.jpg"
+                     material="repeat: 4 4; roughness: 0.2; metalness: 0.1"
                      shadow="receive: true">
             </a-plane>
 
-            <!-- Image 1 - Front -->
             <a-plane position="0 2 -4"
                      width="3"
                      height="2"
@@ -70,14 +64,13 @@
                      animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
                      animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
                 <a-text value="Dalma Wildlife" 
-                        position="0 -1.3 0.1" 
+                        position="0 1.4 0.1" 
                         align="center" 
-                        color="#333"
-                        scale="0.7 0.7 0.7">
+                        color="white"
+                        scale="0.8 0.8 0.8">
                 </a-text>
             </a-plane>
 
-            <!-- Image 2 - Right -->
             <a-plane position="4 2 0"
                      rotation="0 -90 0"
                      width="3"
@@ -89,14 +82,13 @@
                      animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
                      animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
                 <a-text value="Hundru Falls" 
-                        position="0 -1.3 0.1" 
+                        position="0 1.4 0.1" 
                         align="center" 
-                        color="#333"
-                        scale="0.7 0.7 0.7">
+                        color="white"
+                        scale="0.8 0.8 0.8">
                 </a-text>
             </a-plane>
 
-            <!-- Image 3 - Back -->
             <a-plane position="0 2 4"
                      rotation="0 180 0"
                      width="3"
@@ -108,14 +100,13 @@
                      animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
                      animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
                 <a-text value="Patratu Valley" 
-                        position="0 -1.3 0.1" 
+                        position="0 1.4 0.1" 
                         align="center" 
-                        color="#333"
-                        scale="0.7 0.7 0.7">
+                        color="white"
+                        scale="0.8 0.8 0.8">
                 </a-text>
             </a-plane>
 
-            <!-- Image 4 - Left -->
             <a-plane position="-4 2 0"
                      rotation="0 90 0"
                      width="3"
@@ -127,18 +118,16 @@
                      animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
                      animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
                 <a-text value="Rajderwa Bird Sanctuary" 
-                        position="0 -1.3 0.1" 
+                       position="0 1.4 0.1" 
                         align="center" 
-                        color="#333"
-                        scale="0.7 0.7 0.7">
+                        color="white"
+                        scale="0.8 0.8 0.8">
                 </a-text>
             </a-plane>
 
-            <!-- Camera with controls -->
             <a-entity id="rig" position="0 1.6 0">
                 <a-camera look-controls wasd-controls cursor="rayOrigin: mouse"></a-camera>
             </a-entity>
-
         </a-scene>
     </main>
     <script src="ar.js"></script>
