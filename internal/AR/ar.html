@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jharkhand</title>
     <link rel="stylesheet" href="ar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.0/aframe.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -29,32 +30,117 @@
         </nav>
     </div>
     <main>
-    <div class="cards">
-        <div class="card red">
-            <a href="dalma_wildlife/dalma-wildlife.html">
-                <p class="tip">Dalma Wildlife</p>
-                <img src="../../media/images/dalma_wildlife/1.jpg" alt="Dalma Wildlife Sanctuary">
-                <p class="second-text">Dalma Wildlife Sanctuary is a wildlife sanctuary located 10 km from the city of Jamshedpur in the 
-                    state of Jharkhand. Inaugurated in 1975 it contains significant population of Indian Elephants.
-                </p>
-            </a> 
+        <div class="controls-info">
+            Use mouse to look around • WASD to move • Click images to navigate to details • Press 1-4 keys for quick access
         </div>
-        <div class="card blue">
-            <a href="hundru_falls/hundru_falls.html">
-                <p class="tip">Hundru Falls</p>
-                <img src="../../media/images/hundru_falls/1.jpg" alt="Hundru Falls">
-                <p class="second-text">Hundru Falls is a waterfall located 45 km from Ranchi, the capital of Jharkhand. It is one of the most popular tourist destinations in the state.</p>
-            </a>
-            </a>
-        </div>
-        <div class="card green">
-            <a href="patratu/patratu.html">
-                <p class="tip">Patratu valley</p>
-                <img src="../../media/images/patratu/1.jpg" alt="Patratu Valley">
-                <p class="second-text">Patratu Valley is a picturesque valley located 30 km from Ranchi, the capital of Jharkhand. It is known for its scenic beauty and is a popular spot for picnics and outdoor activities.</p>
-            </a>
-        </div>
-    </div>
+        
+        <a-scene id="vr-scene" embedded>
+            <!-- Assets -->
+            <a-assets>
+                <img id="img1" src="https://picsum.photos/800/600?random=1" crossorigin="anonymous">
+                <img id="img2" src="https://picsum.photos/800/600?random=2" crossorigin="anonymous">
+                <img id="img3" src="https://picsum.photos/800/600?random=3" crossorigin="anonymous">
+                <img id="img4" src="https://picsum.photos/800/600?random=4" crossorigin="anonymous">
+            </a-assets>
+
+            <!-- Sky -->
+            <a-sky color="#87CEEB"></a-sky>
+            
+            <!-- Lighting -->
+            <a-light type="ambient" color="#404040"></a-light>
+            <a-light type="directional" position="0 5 5" color="#ffffff"></a-light>
+
+            <!-- Floor -->
+            <a-plane position="0 0 0" 
+                     rotation="-90 0 0" 
+                     width="20" 
+                     height="20" 
+                     color="#7BC8A4" 
+                     shadow="receive: true">
+            </a-plane>
+
+            <!-- Image 1 - Front -->
+            <a-plane position="0 2 -4"
+                     width="3"
+                     height="2"
+                     src="../../media/images/dalma_wildlife/1.jpg"
+                     shadow="cast: true"
+                     class="gallery-image"
+                     animation__click="property: rotation; to: 0 360 0; startEvents: click; dur: 1000"
+                     animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
+                     animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
+                <a-text value="Dalma Wildlife" 
+                        position="0 -1.3 0.1" 
+                        align="center" 
+                        color="#333"
+                        scale="0.7 0.7 0.7">
+                </a-text>
+            </a-plane>
+
+            <!-- Image 2 - Right -->
+            <a-plane position="4 2 0"
+                     rotation="0 -90 0"
+                     width="3"
+                     height="2"
+                     src="../../media/images/hundru_falls/1.jpg"
+                     shadow="cast: true"
+                     class="gallery-image"
+                     animation__click="property: rotation; to: 0 270 0; startEvents: click; dur: 1000"
+                     animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
+                     animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
+                <a-text value="Hundru Falls" 
+                        position="0 -1.3 0.1" 
+                        align="center" 
+                        color="#333"
+                        scale="0.7 0.7 0.7">
+                </a-text>
+            </a-plane>
+
+            <!-- Image 3 - Back -->
+            <a-plane position="0 2 4"
+                     rotation="0 180 0"
+                     width="3"
+                     height="2"
+                     src="../../media/images/patratu/1.jpg"
+                     shadow="cast: true"
+                     class="gallery-image"
+                     animation__click="property: rotation; to: 0 540 0; startEvents: click; dur: 1000"
+                     animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
+                     animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
+                <a-text value="Patratu Valley" 
+                        position="0 -1.3 0.1" 
+                        align="center" 
+                        color="#333"
+                        scale="0.7 0.7 0.7">
+                </a-text>
+            </a-plane>
+
+            <!-- Image 4 - Left -->
+            <a-plane position="-4 2 0"
+                     rotation="0 90 0"
+                     width="3"
+                     height="2"
+                     src="../../media/images/rajderwa_bird_sanctuary/1.jpg"
+                     shadow="cast: true"
+                     class="gallery-image"
+                     animation__click="property: rotation; to: 0 450 0; startEvents: click; dur: 1000"
+                     animation__hover="property: scale; to: 1.1 1.1 1.1; startEvents: mouseenter; dur: 200"
+                     animation__leave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 200">
+                <a-text value="Rajderwa Bird Sanctuary" 
+                        position="0 -1.3 0.1" 
+                        align="center" 
+                        color="#333"
+                        scale="0.7 0.7 0.7">
+                </a-text>
+            </a-plane>
+
+            <!-- Camera with controls -->
+            <a-entity id="rig" position="0 1.6 0">
+                <a-camera look-controls wasd-controls cursor="rayOrigin: mouse"></a-camera>
+            </a-entity>
+
+        </a-scene>
     </main>
+    <script src="ar.js"></script>
 </body>
 </html>
