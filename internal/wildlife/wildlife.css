@@ -86,4 +86,147 @@ header {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
+
+main {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Common css styles end here */
+h2.placeholder {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: rgb(254, 0, 0);
+    text-shadow: #f42727 0px 0px 5px;
+    transition: all 0.3s ease-in;
+}
+h2.placeholder:hover {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: rgb(254, 0, 0);
+    text-shadow: none;
+}
+
+.package {
+    margin-top: 1rem;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-section > h2 {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: aquamarine;
+    text-shadow: #dfcbcb 0px 0px 5px;
+    transition: all 0.3s ease-in;
+}
+.top-section > h2:hover {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: aquamarine;
+    text-shadow: none;
+}
+.top-section > p {
+    margin-top: 1rem;
+    padding-right: clamp(1rem, 5vw, 2rem);
+    padding-left: clamp(1rem, 5vw, 2rem);
+}
+.itinerary-section {
+    width: 100%;
+}
+ul {
+    margin-bottom: 1rem;
+    list-style: none;
+    padding-right: clamp(1rem, 5vw, 2rem);
+    padding-left: clamp(1rem, 5vw, 2rem);
+}
+ul.inner-ul {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+}
+ul.inner-ul > li {
+    margin-bottom: 0.2rem;
+}
+span.underline, strong {
+    text-decoration: underline;
+}
+strong {
+    text-transform: uppercase;
+}
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.3s;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% + 2px);
+  background-color: #212121;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #212121;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 2px solid #fefefe;
+}
+
+.btn2 .spn2 {
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
