@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'dalma_wildlife/dalma_wildlife.html',   
         'hundru_falls/hundru_falls.html',   
         'patratu/patratu.html',   
-        'rajderwa_bird_sanctuary/rajderwa_bird_sanctuary.html'
+        'hazaribagh_wildlife_sanctuary/hazaribagh_wildlife_sanctuary.html'
     ];
     
     const images = document.querySelectorAll('.gallery-image');

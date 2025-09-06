@@ -1,18 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <title>Jharkhand</title>
-    <link rel="stylesheet" href="contact.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jharkhand</title>
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>JHARKHAND</h1>
         <nav id="navbar">
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="../login/login.html">Login</a></li>
                 <li>
                     <a href="#">Plans <i class="fas fa-caret-down"></i> </a>
@@ -29,8 +28,58 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Under construction.....</h2>
-    </main>
+  <div class="wrap">
+    <div class="card" role="region" aria-labelledby="contact-title">
+      <main>
+        <section class="info">
+          <h2>Office & Support</h2>
+          <p>Mon — Fri, 9:30 AM — 6:00 PM</p>
+          <h3>Head Office</h3>
+          <p>CS-9, Resapuvanipalem, Vizag - 13</p>
+          <h3>Quick Contacts</h3>
+          <p>Phone: +91 70000 00000<br>Email: hello@example.com</p>
+        </section>
+        <form id="contact-form" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 70000 00000" />
+            </div>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>General question</option>
+              <option>Partnerships</option>
+              <option>Booking & packages</option>
+              <option>Press & media</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <div class="actions">
+            <button type="submit" id="send">Send message</button>
+            <button type="button" class="secondary" id="clear">Clear</button>
+            <div id="status" class="muted" aria-live="polite"></div>
+          </div>
+        </form>
+      </main>
+      <footer>
+        <div class="muted">© Jharkhand Tourism. — Built with care.</div>
+        <div class="muted">Accessibility-friendly · No tracking here</div>
+      </footer>
+    </div>
+  </div>
+  <script src="contact.js"></script>
 </body>
 </html>
