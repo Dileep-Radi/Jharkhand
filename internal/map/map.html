@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand Map with Leaflet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+        <header id="header">
+        <h1>JHARKHAND</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="internal/login/login.html">Login</a></li>
+                <li>
+                    <a href="#">Plans <i class="fas fa-caret-down"></i> </a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="internal/culture/chronicles.html">Chronicles</a></li>
+                        <li><a href="internal/wildlife/wildlife.html">Wildlife</a></li>
+                      </ul>
+                    </div>
+                </li>
+                <li><a href="internal/vr/vr.html">VR</a></li>
+                <li><a href="internal/map/map.html">Map</a></li>
+                <li><a href="internal/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="map"></div>
+    
+    <div class="legend">
+        <h3>🗺️ Jharkhand Locations</h3>
+        <div class="legend-item">
+            <div class="legend-color city"></div>
+            <span>Major Cities</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color wildlife"></div>
+            <span>Wildlife Sanctuaries</span>
+        </div>
+    </div>
+
+    <script src="map.js"></script>
+
+</body>
+</html>
